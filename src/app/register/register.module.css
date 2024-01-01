@@ -1,0 +1,89 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.form {
+    width: 100%;
+    max-width: 350px;
+    padding: 50px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 2rem;
+    color: #fff;
+    text-align: left;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+@media (max-width: 300px) {
+    .container {
+        flex-direction: column;
+        min-width: 300px;
+        padding: 10px;
+    }
+
+
+    .form {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+}
+
+
+.button {
+    padding: 10px;
+    margin-bottom: 5px;
+    border: none;
+    width: 100%;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+
+    background: linear-gradient(108.32deg, #62CDCB 24.88%, #4599DB 78.49%);
+
+}
+
+.button:hover:enabled {
+    transition: background-color 0.3s ease;
+    background: linear-gradient(108.32deg, #62CDCB 24.88%, #4599DB 78.49%);;
+}
+
+.button:disabled {
+    opacity: 0.5;
+    background-color: #004080; /* Darker shade when disabled or any color you prefer */
+    cursor: not-allowed;
+}
+
+.login {
+    color: #aaa;
+    text-align: center; /* Center the register link */
+    width: 100%; /* Full width to center the text properly */
+    margin-top: 20px;
+}
+
+.login a {
+    background: linear-gradient(74.08deg, #94783E -6.8%, #F3EDA6 16.76%, #F8FAE5 30.5%, #FFE2BE 49.6%, #D5BE88 78.56%, #F8FAE5 89.01%, #D5BE88 100.43%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.login a:hover {
+    color: #08c;
+}
+

@@ -1,0 +1,574 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+@media (max-width: 300px) {
+    .container {
+        flex-direction: column;
+        min-width: 300px;
+        padding: 10px;
+    }
+}
+
+.userName {
+    color: #fff;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.section {
+    width: 100%;
+    box-sizing: border-box;
+    /*background: #333;*/
+    position: relative;
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between; /* Aligns children to opposite ends */
+    align-items: center; /* Vertically centers the children */
+    margin: 20px;
+    color: #ffffff;
+}
+
+.sectionTitle {
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #FFFFFF;
+}
+
+.sectionContent {
+    margin: 20px;
+}
+
+.fieldContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.fieldContainer label {
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+
+    color: rgba(255, 255, 255, 0.33);
+
+
+}
+
+.fieldContainer input,
+.fieldContainer select {
+    width: 70%;
+    text-align: right;
+    background: rgba(217, 217, 217, 0.06);
+    border: none;
+    color: white;
+    border-radius: 20px;
+    padding-right: 10px;
+}
+
+.fieldContainer select option {
+    background: black;
+    color: white;
+    text-align: right; /* Align text to the right */
+    direction: rtl;
+}
+
+.fieldContainer input:disabled,
+.fieldContainer select:disabled {
+    background: rgba(217, 217, 217, 0.06);
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.noSpinners::-webkit-inner-spin-button,
+.noSpinners::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.inputWrapper {
+
+}
+
+.noSpinners {
+    -moz-appearance: textfield;
+    padding-right: 30px;
+}
+
+.unit {
+    position: absolute;
+    right: 10px; /* Adjust based on your design */
+    color: #666; /* Dimmed text color for the unit */
+
+}
+
+.saveButton {
+
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+    /* Golden */
+    background: linear-gradient(74.08deg, #94783E -6.8%, #F3EDA6 16.76%, #F8FAE5 30.5%, #FFE2BE 49.6%, #D5BE88 78.56%, #F8FAE5 89.01%, #D5BE88 100.43%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.bannerImage {
+    width: 100%;
+    height: auto;
+    background: #162329;
+    /*height: auto;*/
+    display: block;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.profileInfo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+}
+
+.profileName {
+
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.232815px;
+    color: white;
+    margin-bottom: 5px; /* Space between elements */
+}
+
+.gender, .tags {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px; /* Adjusted to match Figma */
+    line-height: 16px;
+    letter-spacing: -0.232815px;
+    color: white;
+}
+
+.tagButton {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: default;
+    border-radius: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+}
+
+.imageUploadContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.imageUploadInput {
+    display: none; /* Hide the actual input */
+}
+
+.imageUploadLabel {
+    color: white; /* White text */
+    cursor: pointer; /* Change cursor to indicate clickable */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.plusIcon {
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    line-height: 1;
+
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 17px;
+}
+
+.plusIcon::before {
+    content: '+';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    line-height: 1;
+    color: transparent;
+    background: linear-gradient(74.08deg, #94783E -6.8%, #F3EDA6 16.76%, #F8FAE5 30.5%, #FFE2BE 49.6%, #D5BE88 78.56%, #F8FAE5 89.01%, #D5BE88 100.43%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fieldName {
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.33);
+}
+
+.fieldValue {
+    margin-top: 5px;
+    color: white;
+}
+
+.placeholderText {
+    color: rgba(255, 255, 255, 0.52);
+}
+
+.svgPlaceholder {
+}
+
+/* Section for the 'Interest' information */
+.interestSection {
+    /* Similar styling to the about section */
+    background-color: #34495E;
+    color: #fff;
+    padding: 20px;
+    margin-top: 20px; /* Space from the previous content */
+    border-radius: 8px;
+}
+
+.interestContent {
+    /* Styles for the interest content */
+}
+
+.interestTag {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Adjusted to center items vertically */
+    padding: 8px 4px 8px 8px;
+    gap: 7px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    margin: 5px; /* Space between tags */
+    cursor: pointer;
+}
+
+.interestText {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+}
+
+.removeInterestButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #FFFFFF;
+    width: 10.5px;
+    height: 10.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+.addInterestField {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid #ccc; /* Mimics an input field */
+    background: rgba(217, 217, 217, 0.06);
+
+    border-radius: 10px;
+}
+
+.interestButtons {
+    display: flex;
+    flex-wrap: wrap; /* Allows buttons to wrap to the next line */
+    gap: 10px; /* Space between buttons */
+}
+
+.interestButton {
+    background-color: #16a085; /* Example button color */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: default;
+    border-radius: 20px; /* Rounded corners */
+    font-size: 16px;
+    /* Adjust as needed for button styles */
+}
+.interestText1 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    /* Golden 2 */
+    background: linear-gradient(74.08deg, #94783E -6.8%, #F3EDA6 16.76%, #F8FAE5 30.5%, #FFE2BE 49.6%, #D5BE88 78.56%, #F8FAE5 89.01%, #D5BE88 100.43%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.interestText2 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+
+
+}
+/*
+!* profile.module.css *!
+
+.form {
+    width: 100%;
+    max-width: 400px;
+    padding: 50px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    position: relative;
+    margin-bottom: 10px;
+    color: #fff;
+    width: 100%;
+}
+
+.input, .button {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    border: none;
+    width: calc(100% - 20px); !* Adjust for padding *!
+}
+
+.input {
+    background-color: #333;
+    border: 1px solid #555;
+    color: #fff;
+    padding-right: 30px;
+}
+
+.button {
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: calc(100% - 20px);
+    transition: background-color 0.3s ease;
+
+}
+
+.button:hover:enabled {
+    background-color: #0056b3;
+}
+
+.button:disabled {
+    opacity: 0.5;
+    background-color: #004080; !* Darker shade when disabled or any color you prefer *!
+    cursor: not-allowed;
+}
+
+.register {
+    color: #aaa;
+    text-align: center; !* Center the register link *!
+    width: 100%; !* Full width to center the text properly *!
+    margin-top: 20px;
+}
+
+.register a {
+    color: #0af;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.register a:hover {
+    color: #08c;
+}
+
+
+.title {
+    font-size: 2rem;
+    color: #fff;
+    text-align: left;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.backLink {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.backLink:hover {
+    text-decoration: underline;
+}
+
+.backButton {
+
+    display: flex;
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.backArrow {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+}
+
+.togglePasswordButton {
+    position: absolute;
+    right: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+
+@media (max-width: 300px) {
+    .container {
+        min-width: 300px;
+        padding: 10px;
+    }
+
+
+    .form {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+}
+
+.relativeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #333;
+    z-index: 1000;
+    padding: 0 20px;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+
+!* Section for the profile picture *!
+.profilePictureSection {
+    padding: 20px;
+    text-align: center; !* Center the placeholder text *!
+}
+
+.profilePicture {
+    !* Placeholder styles for the profile picture *!
+
+    height: 200px; !* Example height *!
+    margin-top: 60px; !* Offset for the fixed header *!
+}
+
+!* Section for the 'About' information *!
+.aboutSection {
+    padding: 20px;
+}
+
+.aboutContent {
+    !* Styles for the about content *!
+}
+
+
+
+
+
+
+
+.headerSpacer {
+    height: 60px; !* This height should match the header's height *!
+}
+.aboutSection {
+    background-color: #2C3E50; !* Dark background for the section *!
+    color: #fff; !* White text *!
+    padding: 20px;
+    margin-top: 20px; !* Space from the previous content *!
+    border-radius: 8px; !* Rounded corners *!
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sectionTitle {
+    !* Style for the section title *!
+}
+
+
+
+
+
+
+
+
+.placeholderText {
+    !* Style for the placeholder text, similar to the about section *!
+    opacity: 0.7;
+}*/
+

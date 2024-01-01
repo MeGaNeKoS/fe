@@ -1,0 +1,17 @@
+.backButton {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    /*position: absolute;*/
+    /*top: 20px;*/
+    /*left: 20px;*/
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.backArrow {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+}
